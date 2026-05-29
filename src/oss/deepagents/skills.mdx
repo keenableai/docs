@@ -309,7 +309,7 @@ When multiple skill sources contain a skill with the same name, the skill from t
 # If both sources contain a skill named "web-search",
 # the one from "/skills/project/" wins (loaded last).
 agent = create_deep_agent(
-    model="google_genai:gemini-3.1-pro-preview",
+    model="google_genai:gemini-3.5-flash",
     skills=["/skills/user/", "/skills/project/"],
     ...
 )
@@ -349,7 +349,7 @@ research_subagent = {
 }
 
 agent = create_deep_agent(
-    model="google_genai:gemini-3.1-pro-preview",
+    model="google_genai:gemini-3.5-flash",
     skills=["/skills/main/"],  # Main agent and GP subagent get these
     subagents=[research_subagent],  # Researcher gets only its own skills
 )
@@ -367,7 +367,7 @@ const researchSubagent = {
 };
 
 const agent = await createDeepAgent({
-  model: "google_genai:gemini-3.1-pro-preview",
+  model: "google_genai:gemini-3.5-flash",
   skills: ["/skills/main/"],  // Main agent and GP subagent get these
   subagents: [researchSubagent],  // Researcher gets only its own skills
 });
@@ -557,4 +557,6 @@ These are a few general guidelines for using tools and skills:
 
 <Tip>
 Trace how your agent discovers and executes skills with [LangSmith](https://smith.langchain.com). Follow the [observability quickstart](/langsmith/observability-quickstart) to get set up.
+
+We recommend you also set up [LangSmith Engine](/langsmith/engine), which monitors your traces, detects issues, and proposes fixes.
 </Tip>
