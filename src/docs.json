@@ -704,7 +704,6 @@
                       "group": "Tutorials",
                       "pages": [
                         "langsmith/agent-server-feedback",
-                        "langsmith/deploy-google-adk",
                         "langsmith/deploy-other-frameworks",
                         "langsmith/generative-ui-react"
                       ]
@@ -2025,6 +2024,10 @@
     }
   },
   "redirects": [
+    {
+      "source": "/langsmith/deploy-google-adk",
+      "destination": "/langsmith/deploy-other-frameworks#google-adk"
+    },
     {
       "source": "/langsmith/prebuilt-evaluators",
       "destination": "/langsmith/evaluators"
